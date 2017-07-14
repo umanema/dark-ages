@@ -1,7 +1,4 @@
 //------- CONSTANTS
-const int TONE = 0;
-const int MOTOR_NUMBER = 1;
-const char BORDER_CHAR = '\0';
 
 //TODO: REFAC THIS CODE!!!
 
@@ -91,3 +88,12 @@ void switchMotorPinStates() {
     digitalWrite(motorPin[i], motorState[i]);
   }
 }
+
+void test() {
+  //this is test regime when every motor is working
+  for (int i = 0; i < 11; i++) { 
+    driveMotor(i);
+    digitalWrite(motorPin[i], HIGH);
+  }
+}
+
